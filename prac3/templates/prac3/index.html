@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+        <ul>
+            {% for question in question_list %}
+                <li><a href="{{question.id}}/detail">{{question.question_str}}</a></li>
+            {% endfor %}
+        </ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+
+        <h1>{{question.question_str}}</h1>
+        <form method="post" action="vote">
+            {% csrf_token %}
+            {% for choice in choice_list %}
+                <input type="radio" name="choice_id" value="{{choice.id}}">{{choice.choice_str}}</input><br>
+            {% endfor %}
+            <input type="submit" value="확인">
+        </form>
+</body>
+</html>

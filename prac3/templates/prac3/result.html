@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vote result</title>
+</head>
+<body>
+        <h1>{{question.question_str}}</h1>
+        <ul>
+            {% for choice in choice_list %}
+                <li>{{choice.choice_str}} -- {{choice.vote}}vote</li>
+            {% endfor %}
+        </ul>
+        <a href="detail">Vote again?</a>
+</body>
+</html>
